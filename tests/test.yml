@@ -1,0 +1,36 @@
+---
+- name: Template test playbook
+  hosts: localhost
+  vars_files:
+    - ../mountpoints.yml
+  vars:
+    galaxy_root: /opt/galaxy
+  pre_tasks:
+    - name: Debug vars
+      ansible.builtin.debug:
+        msg: "{{ tools.tools.path }}"
+
+    - name: Template vgcn-mounts.yml
+      # Comment
+      ansible.builtin.template:
+        dest: /home/mk/repos/mounts/tests/mounts/vgcn-mounts.yml
+        src: ../vgcn-mounts.yml.j2
+        mode: "0755"
+    - name: Description
+      # Comment
+      ansible.builtin.blockinfile:
+        path: userdata.yml
+        block: "{{ lookup('file', 'mounts/vgcn-mounts.yml') }}"
+        insertafter: EOF
+    - name: Template group-vars-all.yml
+      # Comment
+      ansible.builtin.template:
+        dest: /home/mk/repos/mounts/tests/mounts/all.yml
+        src: ../group-vars-all.yml.j2
+        mode: "0755"
+    - name: Template deestinations.yml
+      # Comment
+      ansible.builtin.template:
+        dest: /home/mk/repos/mounts/tests/mounts/destinations.yml
+        src: ../destinations.yml.j2
+        mode: "0755"

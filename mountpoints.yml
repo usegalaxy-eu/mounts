@@ -1,0 +1,359 @@
+---
+
+sample:
+  object_name: # must not contain dashes (-)
+    name: dir-name-to-put-in-autofs-file # can contain dashes
+    path: /absolute/mount/path
+    export: denbi.export/path
+    docker_perm: rw
+    nfs_nfs_options: # NFS mount options
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+
+cvmfs:
+  data:
+    name: data
+    path: /cvmfs/data.galaxyproject.org
+    export: data.galaxyproject.org # (? needs to be changed accordingly)
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  singularity:
+    name: singularity
+    path: /cvmfs/singularity.galaxyproject.org
+    export: singularity.galaxyproject.org # (? needs to be changed accordingly)
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+
+dnb:
+  db:
+    name: db
+    path: /data/db
+    export: ufr-dyn.isi1.public.ads.uni-freiburg.de:/ifs/isi1/ufr/bronze/nfs/denbi/&
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  dp01:
+    name: dp01
+    path: /data/dp01
+    export: denbi.svm.bwsfs.uni-freiburg.de:/dataplant01
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  0:
+    name: 0
+    path: /data/0
+    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  1:
+    name: 1
+    path: /data/1
+    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  2:
+    name: 2
+    path: /data/2
+    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  3:
+    name: 3
+    path: /data/3
+    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  4:
+    name: 4
+    path: /data/4
+    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  5:
+    name: 5
+    path: /data/5
+    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  6:
+    name: 6
+    path: /data/6
+    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  7:
+    name: 7
+    path: /data/7
+    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  dnb_ds01:
+    name: dnb-ds01
+    path: /data/dnb-ds01
+    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01-legacy
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  dnb_ds02:
+    name: dnb-ds02
+    path: /data/dnb-ds02
+    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb02-legacy
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  dnb01:
+    name: dnb01
+    path: /data/dnb01
+    export: ufr-dyn.isi1.public.ads.uni-freiburg.de:/ifs/isi1/ufr/bronze/nfs/denbi/&
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  dnb02:
+    name: dnb02
+    path: /data/dnb02
+    export: ufr-dyn.isi1.public.ads.uni-freiburg.de:/ifs/isi1/ufr/bronze/nfs/denbi/&
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  dnb03:
+    name: dnb03
+    path: /data/dnb03
+    export: ufr-dyn.isi1.public.ads.uni-freiburg.de:/ifs/isi1/ufr/bronze/nfs/denbi/&
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  dnb04:
+    name: dnb04
+    path: /data/dnb04
+    export: ufr-dyn.isi1.public.ads.uni-freiburg.de:/ifs/isi1/ufr/bronze/nfs/denbi/&
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  dnb05:
+    name: dnb05
+    path: /data/dnb05
+    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/&
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  dnb06:
+    name: dnb06
+    path: /data/dnb06
+    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb06
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  dnb07:
+    name: dnb07
+    path: /data/dnb07
+    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb07
+    docker_perm: rw
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  dnb08:
+    name: dnb08
+    path: /data/dnb08
+    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb08
+    docker_perm: rw
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+jwd:
+  jwd:
+    name: jwd
+    path: /data/jwd
+    export: denbi.svm.bwsfs.uni-freiburg.de:/ws01/&
+    docker_perm: rw
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  jwd01:
+    name: jwd01
+    path: /data/jwd01
+    export: zfs1.galaxyproject.eu:/export/&
+    docker_perm: rw
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+  jwd02f:
+    name: jwd02f
+    path: /data/jwd02f
+    export: zfs1.galaxyproject.eu:/export/&
+    docker_perm: rw
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+  jwd03f:
+    name: jwd03f
+    path: /data/jwd03f
+    export: denbi.svm.bwsfs.uni-freiburg.de:/ws02/&
+    docker_perm: rw
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  jwd04:
+    name: jwd04
+    path: /data/jwd04
+    export: zfs1.galaxyproject.eu:/export/&
+    docker_perm: rw
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+  jwd05e:
+    name: jwd05e
+    path: /data/jwd05e
+    export: zfs1.galaxyproject.eu:/export/&
+    docker_perm: rw
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+sync:
+  gxtst:
+    name: gxtst
+    path: /opt/galaxy
+    export: denbi.svm.bwsfs.uni-freiburg.de:/ws01/galaxy-sync/test
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  gxkey:
+    name: gxkey
+    path: /opt/galaxy
+    export: denbi.svm.bwsfs.uni-freiburg.de:/ws01/galaxy-sync/main/&
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  galaxy_sync:
+    name: galaxy-sync
+    path: /opt/galaxy
+    export: denbi.svm.bwsfs.uni-freiburg.de:/galaxy-sync/&
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+  galaxy_sync_test:
+    name: gxtst
+    path: /opt/galaxy
+    export: denbi.svm.bwsfs.uni-freiburg.de:/ws01/galaxy-sync/test/&
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+
+tmp:
+  tmp:
+    name: tmp
+    path: /tmp
+    export: denbi.svm.bwsfs.uni-freiburg.de:/ws01/jwd/tmp
+    docker_perm: rw
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+
+tools:
+  tools:
+    name: /usr/local/tools
+    path: /usr/local/tools
+    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/tools
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2

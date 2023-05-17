@@ -1,0 +1,18 @@
+---
+- name: Template test playbook
+  hosts: localhost
+  vars_files:
+    - mountpoints.yml
+  tasks:
+    - name: Template vgcn-mounts.yml
+      # Comment
+      ansible.builtin.template:
+        dest: dest/vgcn-mounts.yml
+        src: templates/vgcn-mounts.yml.j2
+        mode: "0755"
+    - name: Description
+      # Comment
+      ansible.builtin.blockinfile:
+        path: ../userdata.yml
+        block: "{{ lookup('file', 'dest/vgcn-mounts.yml') }}"
+        insertafter: EOF

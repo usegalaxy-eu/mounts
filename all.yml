@@ -1,0 +1,12 @@
+---
+- name: Template test playbook
+  hosts: localhost
+  vars_files:
+    - mountpoints.yml
+  tasks:
+    - name: Template group-vars-all.yml
+      # Comment
+      ansible.builtin.template:
+        dest: dest/all.yml
+        src: templates/group-vars-all.yml.j2
+        mode: "0755"

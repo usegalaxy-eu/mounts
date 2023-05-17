@@ -1,0 +1,39 @@
+autofs_conf_files:
+  data:
+    - db				-hard,rw,nosuid,nconnect=2				ufr-dyn.isi1.public.ads.uni-freiburg.de:/ifs/isi1/ufr/bronze/nfs/denbi/&
+    - dp01				-hard,rw,nosuid,nconnect=2				denbi.svm.bwsfs.uni-freiburg.de:/dataplant01
+    - 0				-hard,rw,nosuid,nconnect=2				denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
+    - 1				-hard,rw,nosuid,nconnect=2				denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
+    - 2				-hard,rw,nosuid,nconnect=2				denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
+    - 3				-hard,rw,nosuid,nconnect=2				denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
+    - 4				-hard,rw,nosuid,nconnect=2				denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
+    - 5				-hard,rw,nosuid,nconnect=2				denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
+    - 6				-hard,rw,nosuid,nconnect=2				denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
+    - 7				-hard,rw,nosuid,nconnect=2				denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
+    - dnb-ds01				-hard,rw,nosuid,nconnect=2				denbi.svm.bwsfs.uni-freiburg.de:/dnb01-legacy
+    - dnb-ds02				-hard,rw,nosuid,nconnect=2				denbi.svm.bwsfs.uni-freiburg.de:/dnb02-legacy
+    - dnb01				-hard,rw,nosuid,nconnect=2				ufr-dyn.isi1.public.ads.uni-freiburg.de:/ifs/isi1/ufr/bronze/nfs/denbi/&
+    - dnb02				-hard,rw,nosuid,nconnect=2				ufr-dyn.isi1.public.ads.uni-freiburg.de:/ifs/isi1/ufr/bronze/nfs/denbi/&
+    - dnb03				-hard,rw,nosuid,nconnect=2				ufr-dyn.isi1.public.ads.uni-freiburg.de:/ifs/isi1/ufr/bronze/nfs/denbi/&
+    - dnb04				-hard,rw,nosuid,nconnect=2				ufr-dyn.isi1.public.ads.uni-freiburg.de:/ifs/isi1/ufr/bronze/nfs/denbi/&
+    - dnb05				-hard,rw,nosuid,nconnect=2				denbi.svm.bwsfs.uni-freiburg.de:/dnb01/&
+    - dnb06				-hard,rw,nosuid,nconnect=2				denbi.svm.bwsfs.uni-freiburg.de:/dnb06
+    - dnb07				-hard,rw,nosuid,nconnect=2				denbi.svm.bwsfs.uni-freiburg.de:/dnb07
+    - dnb08				-hard,rw,nosuid,nconnect=2				denbi.svm.bwsfs.uni-freiburg.de:/dnb08
+  jwd:
+    - jwd				-hard,rw,nosuid,nconnect=2				denbi.svm.bwsfs.uni-freiburg.de:/ws01/&
+    - jwd01				-hard,rw,nosuid				zfs1.galaxyproject.eu:/export/&
+    - jwd02f				-hard,rw,nosuid				zfs1.galaxyproject.eu:/export/&
+    - jwd03f				-hard,rw,nosuid,nconnect=2				denbi.svm.bwsfs.uni-freiburg.de:/ws02/&
+    - jwd04				-hard,rw,nosuid				zfs1.galaxyproject.eu:/export/&
+    - jwd05e				-hard,rw,nosuid				zfs1.galaxyproject.eu:/export/&
+  gxtest:
+    - gxtst			-hard,rw,nosuid,nconnect=2			denbi.svm.bwsfs.uni-freiburg.de:/ws01/galaxy-sync/test
+  gxkey:
+    - gxkey			-hard,rw,nosuid,nconnect=2			denbi.svm.bwsfs.uni-freiburg.de:/ws01/galaxy-sync/main/&
+    - galaxy-sync	-hard,rw,nosuid,nconnect=2		denbi.svm.bwsfs.uni-freiburg.de:/galaxy-sync/&
+  usrlocal:
+    - /usr/local/tools				-hard,rw,nosuid,nconnect=2				denbi.svm.bwsfs.uni-freiburg.de:/dnb01/tools
+  celerycluster:
+    - /tmp      -hard,rw,nosuid,nconnect=2      denbi.svm.bwsfs.uni-freiburg.de:/ws01/jwd/tmp
+    - /opt/galaxy    			-hard,rw,nosuid,nconnect=2			denbi.svm.bwsfs.uni-freiburg.de:/ws01/galaxy-sync/main/&

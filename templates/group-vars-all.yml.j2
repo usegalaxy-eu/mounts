@@ -1,0 +1,22 @@
+#jinja2: trim_blocks: True, lstrip_blocks: True
+autofs_conf_files:
+  data:
+    {% for mount in dnb.values() %}
+    - {{ mount.name }}				-{{ mount.nfs_options | join(',') }}				{{ mount.export }}
+    {% endfor %}
+  jwd:
+    {% for mount in jwd.values() %}
+    - {{ mount.name }}				-{{ mount.nfs_options | join(',') }}				{{ mount.export }}
+    {% endfor %}
+  gxtest:
+    - {{ sync.gxtst.name }}			-{{ sync.gxtst.nfs_options | join(',') }}			{{ sync.gxtst.export }}
+  gxkey:
+    - {{ sync.gxkey.name }}			-{{ sync.gxkey.nfs_options | join(',') }}			{{ sync.gxkey.export }}
+    - {{ sync.galaxy_sync.name }}	-{{ sync.galaxy_sync.nfs_options | join(',') }}		{{ sync.galaxy_sync.export }}
+  usrlocal:
+    {% for mount in tools.values() %}
+    - {{ mount.name }}				-{{ mount.nfs_options | join(',') }}				{{ mount.export }}
+    {% endfor %}
+  celerycluster:
+    - {{ tmp.tmp.path }}      -{{ tmp.tmp.nfs_options | join(',') }}      {{ tmp.tmp.export }}
+    - /opt/galaxy    	    		-{{ sync.gxkey.nfs_options | join(',') }}			{{ sync.gxkey.export }}
