@@ -2,7 +2,7 @@
 # and template the mountpoint variable files
 TARGETS := dest/all.yml dest/vgcn-mounts.yml dest/destinations.yml
 
-.PHONY: deps all help clean
+.PHONY: deps all help clean cleandeps
 
 
 help:
@@ -17,11 +17,13 @@ deps:
 
 all: deps $(TARGETS)
 
-$(TARGETS): deps
+$(TARGETS):
 	$(info Templating $@)
-	. ./ansible/bin/activate; ansible-playbook -i [localhost,] $(notdir $@)
+	ansible-playbook -i [localhost,] $(notdir $@)
 
 clean:
 	rm -f $(TARGETS); \
+
+cleandeps:
 	rm -rf ansible; \
     find -iname "*.pyc" -delete
