@@ -1,6 +1,6 @@
 # Makefile to run ansible playbooks locally (on Jenkins) 
 # and template the mountpoint variable files
-TARGETS := dest/all.yml dest/vgcn-mounts.yml
+TARGETS := dest/all.yml dest/vgcn-mounts.yml dest/destinations.yml
 
 .PHONY: deps all help clean
 
