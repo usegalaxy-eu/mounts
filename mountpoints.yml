@@ -49,14 +49,14 @@ dnb:
     name: dp01
     path: /data/dp01
     export: denbi.svm.bwsfs.uni-freiburg.de:/dataplant01
-    docker_perm: ro
+    docker_perm: rw
     nfs_options:
       - hard
       - rw
       - nosuid
       - nconnect=2
   0:
-    name: 0
+    name: '0'
     path: /data/0
     export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
     docker_perm: ro
@@ -66,7 +66,7 @@ dnb:
       - nosuid
       - nconnect=2
   1:
-    name: 1
+    name: '1'
     path: /data/1
     export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
     docker_perm: ro
@@ -76,7 +76,7 @@ dnb:
       - nosuid
       - nconnect=2
   2:
-    name: 2
+    name: '2'
     path: /data/2
     export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
     docker_perm: ro
@@ -86,7 +86,7 @@ dnb:
       - nosuid
       - nconnect=2
   3:
-    name: 3
+    name: '3'
     path: /data/3
     export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
     docker_perm: ro
@@ -96,7 +96,7 @@ dnb:
       - nosuid
       - nconnect=2
   4:
-    name: 4
+    name: '4'
     path: /data/4
     export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
     docker_perm: ro
@@ -106,7 +106,7 @@ dnb:
       - nosuid
       - nconnect=2
   5:
-    name: 5
+    name: '5'
     path: /data/5
     export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
     docker_perm: ro
@@ -116,7 +116,7 @@ dnb:
       - nosuid
       - nconnect=2
   6:
-    name: 6
+    name: '6'
     path: /data/6
     export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
     docker_perm: ro
@@ -126,7 +126,7 @@ dnb:
       - nosuid
       - nconnect=2
   7:
-    name: 7
+    name: '7'
     path: /data/7
     export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
     docker_perm: ro
@@ -209,7 +209,7 @@ dnb:
     name: dnb06
     path: /data/dnb06
     export: denbi.svm.bwsfs.uni-freiburg.de:/dnb06
-    docker_perm: ro
+    docker_perm: rw
     nfs_options:
       - hard
       - rw
