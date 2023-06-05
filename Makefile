@@ -17,7 +17,7 @@ deps:
 
 all: deps $(TARGETS)
 
-$(TARGETS):
+$(TARGETS): deps
 	$(info Templating $@)
 	. ./ansible/bin/activate; ansible-playbook -i [localhost,] $(notdir $@)
 
