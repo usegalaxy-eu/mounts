@@ -1,0 +1,12 @@
+---
+- name: Template destinations
+  hosts: localhost
+  vars_files:
+    - mountpoints.yml
+  tasks:
+    - name: Template destinations.yml
+      # Comment
+      ansible.builtin.template:
+        dest: dest/destinations.yml
+        src: templates/destinations.yml.j2
+        mode: "0755"
