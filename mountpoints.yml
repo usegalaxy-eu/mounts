@@ -306,7 +306,7 @@ sync:
   gxkey:
     name: gxkey
     path: /opt/galaxy
-    export: denbi.svm.bwsfs.uni-freiburg.de:/ws01/galaxy-sync/main/&
+    export: denbi.svm.bwsfs.uni-freiburg.de:/ws01/galaxy-sync/main
     docker_perm: ro
     nfs_options:
       - hard
@@ -316,7 +316,7 @@ sync:
   galaxy_sync:
     name: galaxy-sync
     path: /opt/galaxy
-    export: denbi.svm.bwsfs.uni-freiburg.de:/galaxy-sync/&
+    export: denbi.svm.bwsfs.uni-freiburg.de:/galaxy-sync
     docker_perm: ro
     nfs_options:
       - hard
@@ -326,7 +326,7 @@ sync:
   galaxy_sync_test:
     name: gxtst
     path: /opt/galaxy
-    export: denbi.svm.bwsfs.uni-freiburg.de:/ws01/galaxy-sync/test/&
+    export: denbi.svm.bwsfs.uni-freiburg.de:/ws01/galaxy-sync/test
     docker_perm: ro
     nfs_options:
       - hard
