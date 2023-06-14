@@ -13,6 +13,6 @@
     - name: Description
       # Comment
       ansible.builtin.blockinfile:
-        path: ../userdata.yml
-        block: "{{ lookup('file', 'dest/vgcn-mounts.yaml') }}"
+        path: ../userdata.yaml
+        block: "{{ lookup('file', 'dest/vgcn-mounts.yml') }}"
         insertafter: EOF
