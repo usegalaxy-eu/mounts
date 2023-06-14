@@ -145,6 +145,7 @@ dnb:
       - rw
       - nosuid
       - nconnect=2
+      - nodev
   dnb_ds02:
     name: dnb-ds02
     path: /data/dnb-ds02
@@ -155,6 +156,7 @@ dnb:
       - rw
       - nosuid
       - nconnect=2
+      - nodev
   dnb01:
     name: dnb01
     path: /data/dnb01
@@ -165,6 +167,7 @@ dnb:
       - rw
       - nosuid
       - nconnect=2
+      - nodev
   dnb02:
     name: dnb02
     path: /data/dnb02
@@ -175,6 +178,7 @@ dnb:
       - rw
       - nosuid
       - nconnect=2
+      - nodev
   dnb03:
     name: dnb03
     path: /data/dnb03
@@ -185,6 +189,7 @@ dnb:
       - rw
       - nosuid
       - nconnect=2
+      - nodev
   dnb04:
     name: dnb04
     path: /data/dnb04
@@ -195,6 +200,7 @@ dnb:
       - rw
       - nosuid
       - nconnect=2
+      - nodev
   dnb05:
     name: dnb05
     path: /data/dnb05
@@ -205,6 +211,7 @@ dnb:
       - rw
       - nosuid
       - nconnect=2
+      - nodev
   dnb06:
     name: dnb06
     path: /data/dnb06
@@ -215,6 +222,7 @@ dnb:
       - rw
       - nosuid
       - nconnect=2
+      - nodev
   dnb07:
     name: dnb07
     path: /data/dnb07
@@ -225,6 +233,7 @@ dnb:
       - rw
       - nosuid
       - nconnect=2
+      - nodev
   dnb08:
     name: dnb08
     path: /data/dnb08
@@ -235,6 +244,18 @@ dnb:
       - rw
       - nosuid
       - nconnect=2
+      - nodev
+  dnb09:
+    name: dnb09
+    path: /data/dnb09
+    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb09
+    docker_perm: rw
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+      - nodev
 jwd:
   jwd:
     name: jwd
