@@ -14,5 +14,5 @@
       # Comment
       ansible.builtin.blockinfile:
         path: ../userdata.yml
-        block: "{{ lookup('file', 'dest/vgcn-mounts.yml') }}"
+        block: "{{ lookup('file', 'dest/vgcn-mounts.yaml') }}"
         insertafter: EOF
