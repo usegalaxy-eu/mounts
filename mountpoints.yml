@@ -279,7 +279,7 @@ jwd:
   jwd02f:
     name: jwd02f
     path: /data/jwd02f
-    export: zfs1.galaxyproject.eu:/export/&
+    export: zfs2f.galaxyproject.eu:/export/&
     docker_perm: rw
     nfs_options:
       - hard
@@ -298,7 +298,7 @@ jwd:
   jwd04:
     name: jwd04
     path: /data/jwd04
-    export: zfs1.galaxyproject.eu:/export/&
+    export: zfs3f.galaxyproject.eu:/export/&
     docker_perm: rw
     nfs_options:
       - hard
@@ -307,7 +307,7 @@ jwd:
   jwd05e:
     name: jwd05e
     path: /data/jwd05e
-    export: zfs1.galaxyproject.eu:/export/&
+    export: zfs3f.galaxyproject.eu:/export/&
     docker_perm: rw
     nfs_options:
       - hard
