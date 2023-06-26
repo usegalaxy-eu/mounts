@@ -313,6 +313,18 @@ jwd:
       - hard
       - rw
       - nosuid
+  birna01:
+    name: birna01
+    path: /data/birna01
+    export: denbi.svm.bwsfs.uni-freiburg.de:/&
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nodev
+      - nconnect=2
+
 sync:
   gxtst:
     name: gxtst
