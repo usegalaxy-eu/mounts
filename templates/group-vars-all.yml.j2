@@ -17,6 +17,6 @@ autofs_conf_files:
     {% for mount in tools.values() %}
     - {{ mount.name }}				-{{ mount.nfs_options | join(',') }}				{{ mount.export }}
     {% endfor %}
-  celerycluster:
+  usrlocal_celerycluster:
     - {{ tmp.tmp.path }}      -{{ tmp.tmp.nfs_options | join(',') }}      {{ tmp.tmp.export }}
     - /opt/galaxy    	    		-{{ sync.gxkey.nfs_options | join(',') }}			{{ sync.gxkey.export }}
