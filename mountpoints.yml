@@ -157,6 +157,17 @@ dnb:
       - nosuid
       - nconnect=2
       - nodev
+  dnb_ds03:
+    name: dnb-ds03
+    path: /data/dnb-ds03
+    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb03-legacy
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+      - nodev
   dnb01:
     name: dnb01
     path: /data/dnb01
