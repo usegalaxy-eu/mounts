@@ -190,17 +190,6 @@ dnb:
       - nosuid
       - nconnect=2
       - nodev
-  dnb03:
-    name: dnb03
-    path: /data/dnb03
-    export: ufr-dyn.isi1.public.ads.uni-freiburg.de:/ifs/isi1/ufr/bronze/nfs/denbi/&
-    docker_perm: ro
-    nfs_options:
-      - hard
-      - rw
-      - nosuid
-      - nconnect=2
-      - nodev
   dnb04:
     name: dnb04
     path: /data/dnb04
