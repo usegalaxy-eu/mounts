@@ -256,6 +256,17 @@ dnb:
       - nosuid
       - nconnect=2
       - nodev
+  dnb10:
+    name: dnb10
+    path: /data/dnb10
+    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb10
+    docker_perm: rw
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+      - nodev
 jwd:
   jwd:
     name: jwd
