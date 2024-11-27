@@ -281,7 +281,7 @@ jwd:
   jwd01:
     name: jwd01
     path: /data/jwd01
-    export: zfs1.galaxyproject.eu:/export/&
+    export: noads1.svm.bwsfs.uni-freiburg.de:/galaxy-mwd01:/export/&
     docker_perm: rw
     nfs_options:
       - hard
