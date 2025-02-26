@@ -267,6 +267,17 @@ dnb:
       - nosuid
       - nconnect=2
       - nodev
+  dnb11:
+    name: dnb11
+    path: /data/dnb11
+    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb11
+    docker_perm: rw
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+      - nodev
 jwd:
   jwd:
     name: jwd
