@@ -432,7 +432,6 @@ cache:
       - hard
       - rw
       - nosuid
-      - nconnect=2
 
 misc:
   misc06:
@@ -444,4 +443,3 @@ misc:
       - hard
       - rw
       - nosuid
-      - nconnect=2
