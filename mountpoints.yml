@@ -335,6 +335,15 @@ jwd:
       - hard
       - rw
       - nosuid
+  jwd06:
+    name: jwd06
+    path: /data/jwd06
+    export: zfs06.bi.privat:/export/&
+    docker_perm: rw
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
   birna01:
     name: birna01
     path: /data/birna01
@@ -412,3 +421,25 @@ tools:
       - rw
       - nosuid
       - nconnect=2
+
+cache:
+  cache06:
+    name: cache06
+    path: /data/cache06
+    export: zfs06.bi.privat:/export/&
+    docker_perm: rw
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+
+misc:
+  misc06:
+    name: misc06
+    path: /data/misc06
+    export: zfs06.bi.privat:/export/&
+    docker_perm: rw
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
