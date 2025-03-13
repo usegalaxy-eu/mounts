@@ -1,16 +1,16 @@
 ---
-
 sample:
   object_name: # must not contain dashes (-)
     name: dir-name-to-put-in-autofs-file # can contain dashes
     path: /absolute/mount/path
     export: denbi.export/path
     docker_perm: rw
-    nfs_nfs_options: # NFS mount options
+    nfs_options: # NFS mount options
       - hard
       - rw
       - nosuid
       - nconnect=2
+      - vers=3 # Explicitly add the NFS version to use for the legacy mounts and for the others where version 4 is supported this is not necessary
 
 cvmfs:
   data:
@@ -45,6 +45,7 @@ dnb:
       - rw
       - nosuid
       - nconnect=2
+      - vers=3
   dp01:
     name: dp01
     path: /data/dp01
@@ -55,8 +56,9 @@ dnb:
       - rw
       - nosuid
       - nconnect=2
+      - vers=3
   0:
-    name: '0'
+    name: "0"
     path: /data/0
     export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
     docker_perm: ro
@@ -65,8 +67,9 @@ dnb:
       - rw
       - nosuid
       - nconnect=2
+      - vers=3
   1:
-    name: '1'
+    name: "1"
     path: /data/1
     export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
     docker_perm: ro
@@ -75,8 +78,9 @@ dnb:
       - rw
       - nosuid
       - nconnect=2
+      - vers=3
   2:
-    name: '2'
+    name: "2"
     path: /data/2
     export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
     docker_perm: ro
@@ -85,8 +89,9 @@ dnb:
       - rw
       - nosuid
       - nconnect=2
+      - vers=3
   3:
-    name: '3'
+    name: "3"
     path: /data/3
     export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
     docker_perm: ro
@@ -95,8 +100,9 @@ dnb:
       - rw
       - nosuid
       - nconnect=2
+      - vers=3
   4:
-    name: '4'
+    name: "4"
     path: /data/4
     export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
     docker_perm: ro
@@ -105,8 +111,9 @@ dnb:
       - rw
       - nosuid
       - nconnect=2
+      - vers=3
   5:
-    name: '5'
+    name: "5"
     path: /data/5
     export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
     docker_perm: ro
@@ -115,8 +122,9 @@ dnb:
       - rw
       - nosuid
       - nconnect=2
+      - vers=3
   6:
-    name: '6'
+    name: "6"
     path: /data/6
     export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
     docker_perm: ro
@@ -125,8 +133,9 @@ dnb:
       - rw
       - nosuid
       - nconnect=2
+      - vers=3
   7:
-    name: '7'
+    name: "7"
     path: /data/7
     export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
     docker_perm: ro
@@ -135,6 +144,7 @@ dnb:
       - rw
       - nosuid
       - nconnect=2
+      - vers=3
   dnb_ds01:
     name: dnb-ds01
     path: /data/dnb-ds01
@@ -146,6 +156,7 @@ dnb:
       - nosuid
       - nconnect=2
       - nodev
+      - vers=3
   dnb_ds02:
     name: dnb-ds02
     path: /data/dnb-ds02
@@ -157,6 +168,7 @@ dnb:
       - nosuid
       - nconnect=2
       - nodev
+      - vers=3
   dnb_ds03:
     name: dnb-ds03
     path: /data/dnb-ds03
@@ -168,6 +180,7 @@ dnb:
       - nosuid
       - nconnect=2
       - nodev
+      - vers=3
   dnb01:
     name: dnb01
     path: /data/dnb01
@@ -179,6 +192,7 @@ dnb:
       - nosuid
       - nconnect=2
       - nodev
+      - vers=3
   dnb02:
     name: dnb02
     path: /data/dnb02
@@ -190,6 +204,7 @@ dnb:
       - nosuid
       - nconnect=2
       - nodev
+      - vers=3
   dnb04:
     name: dnb04
     path: /data/dnb04
@@ -201,6 +216,7 @@ dnb:
       - nosuid
       - nconnect=2
       - nodev
+      - vers=3
   dnb05:
     name: dnb05
     path: /data/dnb05
@@ -212,6 +228,7 @@ dnb:
       - nosuid
       - nconnect=2
       - nodev
+      - vers=3
   dnb06:
     name: dnb06
     path: /data/dnb06
@@ -223,6 +240,7 @@ dnb:
       - nosuid
       - nconnect=2
       - nodev
+      - vers=3
   dnb07:
     name: dnb07
     path: /data/dnb07
@@ -234,6 +252,7 @@ dnb:
       - nosuid
       - nconnect=2
       - nodev
+      - vers=3
   dnb08:
     name: dnb08
     path: /data/dnb08
@@ -245,6 +264,7 @@ dnb:
       - nosuid
       - nconnect=2
       - nodev
+      - vers=3
   dnb09:
     name: dnb09
     path: /data/dnb09
@@ -256,6 +276,7 @@ dnb:
       - nosuid
       - nconnect=2
       - nodev
+      - vers=3
   dnb10:
     name: dnb10
     path: /data/dnb10
@@ -267,6 +288,7 @@ dnb:
       - nosuid
       - nconnect=2
       - nodev
+      - vers=3
   dnb11:
     name: dnb11
     path: /data/dnb11
@@ -278,6 +300,7 @@ dnb:
       - nosuid
       - nconnect=2
       - nodev
+      - vers=3
 jwd:
   jwd:
     name: jwd
@@ -289,6 +312,7 @@ jwd:
       - rw
       - nosuid
       - nconnect=2
+      - vers=3
   jwd01:
     name: jwd01
     path: /data/jwd01
@@ -298,6 +322,7 @@ jwd:
       - hard
       - rw
       - nosuid
+      - vers=3
   jwd02f:
     name: jwd02f
     path: /data/jwd02f
@@ -307,6 +332,7 @@ jwd:
       - hard
       - rw
       - nosuid
+      - vers=3
   jwd03f:
     name: jwd03f
     path: /data/jwd03f
@@ -317,6 +343,7 @@ jwd:
       - rw
       - nosuid
       - nconnect=2
+      - vers=3
   jwd04:
     name: jwd04
     path: /data/jwd04
@@ -326,6 +353,7 @@ jwd:
       - hard
       - rw
       - nosuid
+      - vers=3
   jwd05e:
     name: jwd05e
     path: /data/jwd05e
@@ -335,6 +363,7 @@ jwd:
       - hard
       - rw
       - nosuid
+      - vers=3
   jwd06:
     name: jwd06
     path: /data/jwd06
@@ -355,6 +384,7 @@ jwd:
       - nosuid
       - nodev
       - nconnect=2
+      - vers=3
 
 sync:
   gxtst:
@@ -367,6 +397,7 @@ sync:
       - rw
       - nosuid
       - nconnect=2
+      - vers=3
   gxkey:
     name: gxkey
     path: /opt/galaxy
@@ -377,6 +408,7 @@ sync:
       - rw
       - nosuid
       - nconnect=2
+      - vers=3
   galaxy_sync:
     name: galaxy-sync
     path: /opt/galaxy
@@ -387,6 +419,7 @@ sync:
       - rw
       - nosuid
       - nconnect=2
+      - vers=3
   galaxy_sync_test:
     name: gxtst
     path: /opt/galaxy
@@ -397,6 +430,7 @@ sync:
       - rw
       - nosuid
       - nconnect=2
+      - vers=3
 
 tmp:
   tmp:
@@ -409,6 +443,7 @@ tmp:
       - rw
       - nosuid
       - nconnect=2
+      - vers=3
 
 tools:
   tools:
@@ -421,6 +456,7 @@ tools:
       - rw
       - nosuid
       - nconnect=2
+      - vers=3
 
 cache:
   cache06:
