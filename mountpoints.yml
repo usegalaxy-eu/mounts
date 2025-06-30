@@ -323,16 +323,6 @@ jwd:
       - rw
       - nosuid
       - vers=3
-  jwd02f:
-    name: jwd02f
-    path: /data/jwd02f
-    export: zfs2f.galaxyproject.eu:/export/&
-    docker_perm: rw
-    nfs_options:
-      - hard
-      - rw
-      - nosuid
-      - vers=3
   jwd03f:
     name: jwd03f
     path: /data/jwd03f
