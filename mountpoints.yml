@@ -301,6 +301,18 @@ dnb:
       - nconnect=2
       - nodev
       - vers=3
+  dnb12:
+    name: dnb12
+    path: /data/dnb12
+    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb12
+    docker_perm: rw
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+      - nodev
+      - vers=3
 jwd:
   jwd:
     name: jwd
