@@ -384,6 +384,15 @@ jwd:
       - hard
       - rw
       - nosuid
+  jwd08:
+    name: jwd08
+    path: /data/jwd08
+    export: zfs08.bi.privat:/export/&
+    docker_perm: rw
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
   birna01:
     name: birna01
     path: /data/birna01
@@ -488,6 +497,15 @@ cache:
       - hard
       - rw
       - nosuid
+  cache08:
+    name: cache08
+    path: /data/cache08
+    export: zfs08.bi.privat:/export/&
+    docker_perm: rw
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
 
 misc:
   misc06:
@@ -503,6 +521,15 @@ misc:
     name: misc07
     path: /data/misc07
     export: zfs07.bi.privat:/export/&
+    docker_perm: rw
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+  misc08:
+    name: misc08
+    path: /data/misc08
+    export: zfs08.bi.privat:/export/&
     docker_perm: rw
     nfs_options:
       - hard
