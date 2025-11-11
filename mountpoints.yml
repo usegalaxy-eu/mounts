@@ -346,26 +346,6 @@ jwd:
       - nosuid
       - nconnect=2
       - vers=3
-  jwd04:
-    name: jwd04
-    path: /data/jwd04
-    export: zfs3f.galaxyproject.eu:/export/&
-    docker_perm: rw
-    nfs_options:
-      - hard
-      - rw
-      - nosuid
-      - vers=3
-  jwd05e:
-    name: jwd05e
-    path: /data/jwd05e
-    export: zfs3f.galaxyproject.eu:/export/&
-    docker_perm: rw
-    nfs_options:
-      - hard
-      - rw
-      - nosuid
-      - vers=3
   jwd06:
     name: jwd06
     path: /data/jwd06
