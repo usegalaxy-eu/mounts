@@ -10,5 +10,5 @@ nfs_check_excluded_mounts:
   - jwd03f
   - jwd04
   - jwd05e
-nfs_check_timeout_sec: 20
+nfs_check_timeout_sec: 25
 nfs_check_path: /usr/local/bin/check_nfs_access
