@@ -1,0 +1,14 @@
+## Tests for NFS see: https://github.com/usegalaxy-eu/vgcn-infrastructure-playbook/pull/55/changes
+nfs_check_var_prefix: nfs_
+nfs_check_excluded_mounts:
+  - db
+  - dnb04
+  - dnb-ds01
+  - 5
+  - jwd01
+  - jwd02f
+  - jwd03f
+  - jwd04
+  - jwd05e
+nfs_check_timeout_sec: 10
+nfs_check_path: /usr/local/bin/check_nfs_access
