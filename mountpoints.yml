@@ -487,6 +487,17 @@ cache:
       - rw
       - nosuid
 
+cvmfs:
+  cvmfs08:
+    name: cvmfs08
+    path: /data/cvmfs08
+    export: zfs08.bi.privat:/export/&
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+
 misc:
   misc06:
     name: misc06
