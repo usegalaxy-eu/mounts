@@ -24,6 +24,10 @@ autofs_conf_files:
     {% for mount in cache.values() %}
     - {{ mount.name }}				-{{ mount.nfs_options | join(',') }}				{{ mount.export }}
     {% endfor %}
+  cvac:
+    {% for mount in cvac.values() %}
+    - {{ mount.name }}				-{{ mount.nfs_options | join(',') }}				{{ mount.export }}
+    {% endfor %}
   misc:
     {% for mount in misc.values() %}
     - {{ mount.name }}				-{{ mount.nfs_options | join(',') }}				{{ mount.export }}
