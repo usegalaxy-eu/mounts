@@ -515,3 +515,14 @@ misc:
       - hard
       - rw
       - nosuid
+#CVmfsAlienCache
+cvac:
+  cvac08:
+    name: cvac08
+    path: /data/cvac08
+    export: zfs08.bi.privat:/export/cvac08
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
