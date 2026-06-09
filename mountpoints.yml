@@ -313,18 +313,6 @@ dnb:
       - nconnect=2
       - nodev
       - vers=3
-  dnb13:
-    name: dnb13
-    path: /data/dnb13
-    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb13
-    docker_perm: rw
-    nfs_options:
-      - hard
-      - rw
-      - nosuid
-      - nconnect=2
-      - nodev
-      - vers=3
 jwd:
   jwd:
     name: jwd
