@@ -444,6 +444,19 @@ sync:
       - nconnect=2
       - vers=3
 
+tmp:
+  tmp:
+    name: tmp
+    path: /tmp
+    export: denbi.svm.bwsfs.uni-freiburg.de:/ws01/jwd/tmp
+    docker_perm: rw
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+      - vers=3
+
 tools:
   tools:
     name: /usr/local/tools
