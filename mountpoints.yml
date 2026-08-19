@@ -57,31 +57,9 @@ dnb:
       - nosuid
       - nconnect=2
       - vers=3
-  0:
-    name: "0"
-    path: /data/0
-    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
-    docker_perm: ro
-    nfs_options:
-      - hard
-      - rw
-      - nosuid
-      - nconnect=2
-      - vers=3
   1:
     name: "1"
     path: /data/1
-    export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
-    docker_perm: ro
-    nfs_options:
-      - hard
-      - rw
-      - nosuid
-      - nconnect=2
-      - vers=3
-  2:
-    name: "2"
-    path: /data/2
     export: denbi.svm.bwsfs.uni-freiburg.de:/dnb01/depot/&
     docker_perm: ro
     nfs_options:
