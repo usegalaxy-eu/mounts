@@ -23,6 +23,18 @@ cvmfs:
       - rw
       - nosuid
       - nconnect=2
+
+  data:
+    name: idc
+    path: /cvmfs/idc.galaxyproject.org
+    export: idc.galaxyproject.org # (? needs to be changed accordingly)
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - rw
+      - nosuid
+      - nconnect=2
+
   singularity:
     name: singularity
     path: /cvmfs/singularity.galaxyproject.org
