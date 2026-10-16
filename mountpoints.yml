@@ -20,7 +20,7 @@ cvmfs:
     docker_perm: ro
     nfs_options:
       - hard
-      - rw
+      - ro
       - nosuid
       - nconnect=2
 
@@ -31,7 +31,7 @@ cvmfs:
     docker_perm: ro
     nfs_options:
       - hard
-      - rw
+      - ro
       - nosuid
       - nconnect=2
 
@@ -42,7 +42,7 @@ cvmfs:
     docker_perm: ro
     nfs_options:
       - hard
-      - rw
+      - ro
       - nosuid
       - nconnect=2
 
