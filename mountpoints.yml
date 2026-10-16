@@ -20,9 +20,21 @@ cvmfs:
     docker_perm: ro
     nfs_options:
       - hard
-      - rw
+      - ro
       - nosuid
       - nconnect=2
+
+  idc:
+    name: idc
+    path: /cvmfs/idc.galaxyproject.org
+    export: idc.galaxyproject.org # (? needs to be changed accordingly)
+    docker_perm: ro
+    nfs_options:
+      - hard
+      - ro
+      - nosuid
+      - nconnect=2
+
   singularity:
     name: singularity
     path: /cvmfs/singularity.galaxyproject.org
@@ -30,7 +42,7 @@ cvmfs:
     docker_perm: ro
     nfs_options:
       - hard
-      - rw
+      - ro
       - nosuid
       - nconnect=2
 
